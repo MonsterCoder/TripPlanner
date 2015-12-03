@@ -1,0 +1,18 @@
+{
+  "name": "trip_planner",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "monstercoder <monstercoder@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
