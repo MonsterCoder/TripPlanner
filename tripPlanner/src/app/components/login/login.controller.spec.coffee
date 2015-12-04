@@ -2,13 +2,16 @@ describe 'login.controller', () ->
   sut = null
   $state = null
   $rootScope = null
+  $mdToast = null
   authService = null
   loginResponse = null
   
   beforeEach module 'tripPlanner'
-  beforeEach inject ($controller, _$state_, _$rootScope_) ->
+  beforeEach inject ($controller, _$state_, _$rootScope_, _$mdToast_) ->
     $state = _$state_
     $rootScope = _$rootScope_
+    $mdToast = _$mdToast_
+    spyOn($state, 'go')
     authService = {
       login: jasmine.createSpy('login').and.callFake () -> loginResponse
     }
@@ -18,7 +21,6 @@ describe 'login.controller', () ->
   describe "login succeed", () ->
     beforeEach () ->
       loginResponse = {success: true }
-      spyOn($state, 'go')
       sut.login()
       
     it "should be redirected to user dashboard", () ->
@@ -27,7 +29,6 @@ describe 'login.controller', () ->
   describe "login failed", () ->
     beforeEach () ->
       loginResponse = { success: false, message: "wrong password" }
-      spyOn($state, 'go')
       sut.login()
       
     it "should stay at login page", () ->
