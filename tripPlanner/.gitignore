@@ -1,8 +1,7 @@
-.DS_Store
-*~
-*.swp
-/node_modules/
+node_modules/
 bower_components/
-.lvimrc
-npm-debug.log
-/tmp/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/
