@@ -1,5 +1,5 @@
 angular.module 'tripPlanner'
-  .controller 'MainController', ($timeout) ->
+  .controller 'MainController', () ->
     'ngInject'
     vm = this
 

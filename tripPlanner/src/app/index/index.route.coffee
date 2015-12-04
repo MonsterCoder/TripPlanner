@@ -8,4 +8,4 @@ angular.module 'tripPlanner'
         controller: 'HomeController'
         controllerAs: 'home'
 
-    $urlRouterProvider.otherwise '/' 
+    $urlRouterProvider.otherwise '/'
