@@ -4,7 +4,7 @@ angular.module 'tripPlanner'
     $stateProvider
       .state 'home',
         url: '/'
-        templateUrl: ''
+        templateUrl: 'app/home/home.html'
         controller: 'HomeController'
         controllerAs: 'home'
 
