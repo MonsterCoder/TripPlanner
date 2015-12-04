@@ -1,4 +1,4 @@
-describe 'controllers', () ->
+describe 'home.controller', () ->
   vm = undefined
   $state = null
   $rootScope = null
